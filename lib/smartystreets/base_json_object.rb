@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-module SmartyStreets
+module SmrtStreets
 
   # Base class for json requests and responses.
   #

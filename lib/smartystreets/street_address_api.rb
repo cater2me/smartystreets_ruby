@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
-module SmartyStreets
+module SmrtStreets
 
-  # Exposes calls to the SmartyStreets Street Address API.
+  # Exposes calls to the SmrtStreets Street Address API.
   #
   # @author Peter Edge (peter.edge@gmail.com)
   class StreetAddressApi
@@ -29,7 +29,7 @@ module SmartyStreets
 
 
     @@request_url = LazyLoader.create_lazy_loader do
-      SmartyStreets.street_address_api_url + '/street-address'
+      SmrtStreets.street_address_api_url + '/street-address'
     end
 
     def self.request_url
@@ -38,8 +38,8 @@ module SmartyStreets
 
     @@query = LazyLoader.create_lazy_loader do
       {
-        'auth-id' => SmartyStreets.auth_id,
-        'auth-token' => SmartyStreets.auth_token
+        'auth-id' => SmrtStreets.auth_id,
+        'auth-token' => SmrtStreets.auth_token
       }
     end
 

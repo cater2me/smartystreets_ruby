@@ -15,13 +15,13 @@ require 'smartystreets/zipcode_request'
 require 'smartystreets/zipcode_response'
 require 'smartystreets/version'
 
-# Wrapper module for the SmartyStreets API.
+# Wrapper module for the SmrtStreets API.
 #
 # Covers both the Street Address and Zipcode APIs.<br>
 # www.smartystreets.com
 #
 # @author Peter Edge (peter.edge@gmail.com)
-module SmartyStreets
+module SmrtStreets
   class << self
     include Util
   end
@@ -36,7 +36,7 @@ module SmartyStreets
     Util.type_checking?
   end
 
-  # Set the authentication id and token from SmartyStreets.
+  # Set the authentication id and token from SmrtStreets.
   #
   # This method must be called exactly once.
   #

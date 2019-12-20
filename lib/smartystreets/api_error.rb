@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
-module SmartyStreets
+module SmrtStreets
 
-  # Wraps errors returned from the SmartyStreets API.
+  # Wraps errors returned from the SmrtStreets API.
   #
   # @author Peter Edge (peter.edge@gmail.com)
   class ApiError < StandardError

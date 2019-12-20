@@ -6,11 +6,11 @@ require "smartystreets/version"
 
 Gem::Specification.new do |gem|
   gem.name          = 'smartystreets'
-  gem.version       = SmartyStreets::GEM_VERSION
+  gem.version       = SmrtStreets::GEM_VERSION
   gem.authors       = ['Peter Edge']
   gem.email         = ['peter.edge@gmail.com']
-  gem.summary       = %{SmartyStreets API Wrapper}
-  gem.description   = %{SmartyStreets API Wrapper for Ruby}
+  gem.summary       = %{SmrtStreets API Wrapper}
+  gem.description   = %{SmrtStreets API Wrapper for Ruby}
   gem.homepage      = 'https://github.com/peter-edge/smartystreets_ruby'
   gem.license       = 'MIT'
 

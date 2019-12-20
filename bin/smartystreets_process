@@ -13,20 +13,20 @@ end
 def mode_input_to_street_address_request(mode, input)
   case mode
   when :full
-    SmartyStreets::StreetAddressRequest.new(
+    SmrtStreets::StreetAddressRequest.new(
       :street => input[0],
       :city => input[1],
       :state => input[2],
       :zipcode => input[3]
     )
   when :no_zipcode
-    SmartyStreets::StreetAddressRequest.new(
+    SmrtStreets::StreetAddressRequest.new(
       :street => input[0],
       :city => input[1],
       :state => input[2]
     )
   when :no_city_state
-    SmartyStreets::StreetAddressRequest.new(
+    SmrtStreets::StreetAddressRequest.new(
       :street => input[0],
       :zipcode => input[1]
     )
@@ -41,10 +41,10 @@ OptionParser.new do |opts|
   opts.on( "-m", "--mode MODE", [:full, :no_street, :no_zipcode, :no_city_state], "The mode") do |opt|
     options[:mode] = opt
   end
-  opts.on( "-i", "--auth_id AUTH_ID", String, "SmartyStreets auth id") do |opt|
+  opts.on( "-i", "--auth_id AUTH_ID", String, "SmrtStreets auth id") do |opt|
     options[:auth_id] = opt
   end
-  opts.on( "-t", "--auth_token AUTH_TOKEN", String, "SmartyStreets auth token") do |opt|
+  opts.on( "-t", "--auth_token AUTH_TOKEN", String, "SmrtStreets auth token") do |opt|
     options[:auth_token] = opt
   end
 end.parse!
@@ -52,9 +52,9 @@ end.parse!
 raise ArgumentError.new("Must specify auth_id") unless options[:auth_id]
 raise ArgumentError.new("Must specify auth_token") unless options[:auth_token]
 
-SmartyStreets.set_auth(options[:auth_id], options[:auth_token])
+SmrtStreets.set_auth(options[:auth_id], options[:auth_token])
 
-ap SmartyStreets::StreetAddressApi.call(
+ap SmrtStreets::StreetAddressApi.call(
   mode_input_to_street_address_request(
     options[:mode],
     argv_to_input(ARGV[0])

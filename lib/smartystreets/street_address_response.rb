@@ -2,7 +2,7 @@
 
 require 'smartystreets/base_json_object'
 
-module SmartyStreets
+module SmrtStreets
 
   # Represents a response for a street address.
   #
